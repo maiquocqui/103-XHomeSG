@@ -290,4 +290,17 @@ $(document).ready(function() {
         animation: 'slide'
     });
 
+    // career script
+    $('.job .job-title').click(function() {
+        if ($(this).parent().hasClass('active') == true) {
+            $(this).parent().removeClass('active')
+            $(this).parent().find('.job-content').slideUp(500);
+        } else {
+            $('.job').removeClass('active');
+            $('.job').find('.job-content').slideUp(500);
+            $(this).parent().addClass('active')
+            $(this).parent().find('.job-content').slideDown(500);
+        }
+    });
+
 });
