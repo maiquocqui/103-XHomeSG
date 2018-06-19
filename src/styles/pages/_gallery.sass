@@ -1,0 +1,59 @@
+.gallery-page
+	padding: 50px 0
+	+media-breakpoint-down(md)
+		padding: 30px 0
+	.gallery-list
+		max-width: 1110px
+		margin: 0 auto
+		.row
+			margin: 0px -10px
+			+media-breakpoint-down(sm)
+				margin: 0px -5px
+			.col-12, .col-6
+				padding: 0px 10px
+				+media-breakpoint-down(sm)
+					padding: 0px 5px
+		.gallery-album
+			display: block
+			height: 165px
+			margin-bottom: 20px
+			+pos(rel,null)
+			+media-breakpoint-down(sm)
+				height: 150px
+				margin-bottom: 10px
+			&:before
+				content: ''
+				+pos(abs, 50% 0 0 0)
+				z-index: 3
+				background: linear-gradient(color-rgba($black,0),color-rgba($black,0.5))
+			&.small
+				height: 260px
+				+media-breakpoint-down(sm)
+					height: 150px
+			&.medium
+				height: 350px
+				+media-breakpoint-down(sm)
+					height: 200px
+			&.big
+				height: 540px
+				+media-breakpoint-down(sm)
+					height: 300px
+			.album-caption
+				color: $white
+				padding: 15px 20px
+				+pos(abs, null 0 0 0)
+				z-index: 5
+				.name
+					+fs(15rem)
+					line-height: 1.3
+					font-weight: 600
+					display: -webkit-box
+					height: 0.9375rem*1.3*2
+					-webkit-line-clamp: 2
+					-webkit-box-orient: vertical
+					overflow: hidden
+					text-overflow: ellipsis
+				time
+					+fs(12rem)
+					font-weight: 600
+
