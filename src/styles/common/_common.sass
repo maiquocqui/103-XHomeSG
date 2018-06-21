@@ -193,53 +193,53 @@
 
 // REGULAR COMMON
 
-.RadCaptcha
-	margin-bottom: 15px
-	#ctl00_altContent2_ctl01_captcha_ctl01, #ctl00_mainContent_RegisterUser_CreateUserStepContainer_captcha_ctl01, #ctl00_mainContent_login1_LoginCtrl_captcha_ctl01
-		float: left
-		+ p 
-			float: left
-			margin-top: 0
-	span
-		+fs(13rem)
-		color: $red
-		margin-bottom: 5px
-	p
-		margin-top: 5px
-	img
-		display: inline-block!important
-		margin-right: 0.9375rem
-		vertical-align: middle
-	input
-		width: 250px
+.ct-captcha
+	width: auto
+	+flexbox
+	align-items: center
+	align-content: center
 	label
 		display: none
-	.rcRefreshImage
-		display: inline-block!important
-		vertical-align: middle
-		position: relative
-		color: transparent
-		width: 30px
-		height: 30px
+.RadCaptcha
+	margin: 0
+	+flexbox
+	flex-wrap: wrap
+	+pos(rel,null)
+	span
+		+fs(14rem)
+		color: $red
+		order: 2
+		position: absolute
+		top: 15px
+		right: 15px
 		+fs(0)
-		&:after
-			content: '\f021'
-			font-family: "FontAwesome"
-			font-size: 18px
-			color: $black
-			position: absolute
-			top: 50%
-			right: 0
-			left: 0
-			+fs(18rem)
-			+transform(translate(0, -50%))
-	#ctl00_mainContent_ctl03_captcha_ctl01
-		float: left
-		+ p 
-			display: table-cell
-			padding: 7px 0
+		&:before
+			content: '\f071'
+			+fs(16rem)
+			color: red
+	> div
+		order: 1
+		+flexbox
+		align-items: center
+		align-content: center
+		width: 100%
+		> div
+			+flexbox
+			align-items: center
+			align-content: center
+			a
+				+fs(0)
+				margin-left: 20px
+				&:before
+					content: '\f021'
+					+fs(18rem)
+				&:hover
+					color: $red
+		> p
+			display: block
+			margin-left: 20px
 			input
-				width: 100%
+
 
 .ActionMenu
 	z-index: 99999 !important
@@ -329,49 +329,37 @@
 		margin-right: 5px
 .form-group
 	position: relative
-	// .fa.fa-exclamation-triangle
-	// 	position: absolute
-	// 	top: 15px
-	// 	right: 15px
-	// 	color: transparent
-	// 	width: 15px
-	// 	height: 15px
-	// 	&:before
-	// 		content: '\f071'
-	// 		font-size: 12px
-	// 		font-weight: 500
-	// 		color: red
-	// 		position: absolute
-	// .fa-exclamation-triangle:before, .fa-warning:before
-	// 	margin-right: 5px
-.contact-form
-	.form-group
-		.fa.fa-exclamation-triangle
-			top: 50px
-			+fs(18rem)
+	.fa.fa-exclamation-triangle
+		position: absolute
+		top: 12px
+		right: 15px
+		+fs(0)
+		&:before
+			content: '\f071'
+			+fs(16rem)
+			color: red
+// .contact-form
+// 	.form-group
+// 		.fa.fa-exclamation-triangle
+// 			top: 50px
+// 			+fs(18rem)
 
 .hidden
 	display: none
 	
 .share
-	text-align: left
-	clear: both
-	&.sc-right
-		text-align: right
-	.face-like
-		width: auto
-		display: inline-block
-	> div, .face-like, .fb-share-button, .google
-		display: inline-block
-		margin-bottom: 5px
-		margin-right: 5px
-		vertical-align: top
-	.google, .tweet
-		width: 60px
-	.fb-share-button.fb_iframe_widget iframe, iframe.twitter-share-button
-		display: block
+	+flexbox
+	align-items: center
+	align-content: center
+	> div
+		+ div
+			margin-left: 10px
 	.google
-		margin-top: -5px
+		iframe
+			margin-top: -2px
+	.tweet
+		iframe
+			margin-top: 2px
 
 // **********SEARCH-PAGE**********
 .searchresults 
@@ -602,3 +590,5 @@ input[type="reset"]
 				a, span
 					background: $red
 					color: $white
+.slick-track
+	margin: 0

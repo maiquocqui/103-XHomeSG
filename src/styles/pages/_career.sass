@@ -106,3 +106,47 @@
 						color: $white
 	.btn-apply
 		@extend .btn-viewmore
+.apply-form
+	+bor-rad(5px)
+	border: 1px solid darken($white,10%)
+	margin-top: 10px
+	iframe
+.dialogpage
+	padding: 20px
+.apply-frm
+	h4
+		@extend .page-title
+		margin-bottom: 10px
+	.col-left
+		float: left
+		width: 50%
+		+media-breakpoint-down(sm)
+			width: 100%
+	.col-right
+		float: right
+		width: 50%
+		+media-breakpoint-down(sm)
+			width: 100%
+	.form-group
+		width: 100%
+		clear: both
+		label
+			+fs(14rem)
+			font-weight: 500
+			color: darken($white,40%)
+	.frm-btn
+		input[type="submit"]
+			line-height: 36px
+			width: auto
+			padding: 0 30px
+			background: $red
+			color: $white
+	.ruFileWrap
+		height: auto !important
+		input
+			height: auto !important
+			width: auto !important
+			line-height: 16px !important
+			font-size: 14px !important
+			padding: 10px 20px !important
+			margin: 0px !important

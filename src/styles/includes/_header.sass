@@ -167,6 +167,7 @@ header
 						color: $red
 	.search
 		margin-left: 40px
+		+pos(rel,null)
 		+media-breakpoint-down(lg)
 			height: 50px
 			+flexbox
@@ -176,7 +177,27 @@ header
 		.search-toggle
 			+fs(16rem)
 			color: $red
+			cursor: pointer
 			+media-breakpoint-down(lg)
 				+fs(20rem)
 		.search-wrap
 			display: none
+			+pos(abs,100% 0 null null)
+			.searchbox
+				+flexbox
+				align-items: center
+				align-content: center
+				background: $main
+				input
+					background: none
+					border: none
+					color: $white
+					+fs(14rem)
+					line-height: 40px
+					padding: 0px 15px
+					flex: auto
+				.searchbutton
+					width: 40px
+					line-height: 40px
+					text-align: center
+					color: $white

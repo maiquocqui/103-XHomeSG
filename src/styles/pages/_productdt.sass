@@ -13,7 +13,7 @@
 		margin-top: 43px
 		+media-breakpoint-down(lg)
 			max-width: 450px
-			margin-top: 40px
+			margin-top: 43px
 		+media-breakpoint-down(sm)
 			width: calc(100% - 75px)
 		.item
@@ -30,13 +30,15 @@
 					width: 100%
 	.product-nav
 		width: 75px
+		padding: 30px 0
+		+pos(rel,null)
 		+media-breakpoint-down(sm)
 			width: 55px
 		.slick-prev, .slick-next
 			display: block
 			width: 100%
 			+fs(0)
-			+pos(rel,null)
+			+pos(abs,null)
 			z-index: 3
 			&:before
 				content: ''
@@ -48,11 +50,17 @@
 				justify-content: center
 				height: 40px
 		.slick-prev
-			margin-bottom: -10px
+			// margin-bottom: -10px
+			top: 0
+			left: 0
+			right: 0
 			&:before
 				content: '\f106'
 		.slick-next
-			margin-top: -10px
+			bottom: 0
+			left: 0
+			right: 0
+			// margin-top: -10px
 			&:before
 				content: '\f107'
 		.item

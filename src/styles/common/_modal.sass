@@ -17,27 +17,73 @@ body.modal-open
 			+bor-rad(0)
 			border: none
 			box-shadow: none
-		&.modal-service
-			max-width: 950px
-			+media-breakpoint-down(md)
-				margin: 50px 15px
-			+media-breakpoint-down(sm)
-				margin: 0
+		.modal-dialog
+		margin: 100px auto
+		max-width: 1000px
+		+media-breakpoint-down(md)
+			margin: 60px auto
+		+media-breakpoint-down(xs)
+			margin: 0px
+		.modal-content
+			+bor-rad(0)
+			border: none
+			box-shadow: none
+		&.modal-order
+			background: $main
+			max-width: 650px
+			+pos(rel,null)
+			+media-breakpoint-down(xs)
+				padding: 0px 30px
+				max-width: 100%
+				width: 100%
 			.modal-content
-				border: 3px solid $red
-				padding: 40px
-				+pos(rel,null)
-			.modal-header
+				background: none
 				padding: 0
-				margin: 0 0 20px
-				border: none
-				.modal-title
-					line-height: 20px
+				+pos(static,null)
+				.modal-header
+					border: none
+					padding: 0
+					margin: 0
+					.close
+						color: $white
+						text-shadow: none
+						opacity: 1
+						line-height: 1
+						+pos(abs, 15px 15px null null)
+						z-index: 10
+						padding: 0
+						margin: 0
+						.lnr
+							line-height: 1
+						+media-breakpoint-down(xs)
+							top: 15px
+							right: 15px
+				.modal-body
+					padding: 40px 0
+			.order-form
+				max-width: 500px
+				margin: 0 auto
+				.module-title
+					color: $white
 					+fs(16rem)
-					text-transform: uppercase
-					font-weight: 600
-					color: $red
-				.close
-					+pos(abs, 15px 15px null null)
-			.modal-body
-				padding: 0
+					margin-bottom: 10px
+				.form-wrap
+					.form-group
+						label
+							display: block
+				.frm-btn
+					input[type="submit"]
+						// background: $white
+						// color: $red
+						font-weight: 500
+			.inner-content
+				+media-breakpoint-down(sm)
+					padding: 40px 0px !important
+			.thankyou-content
+				img
+					height: 100px
+					margin-bottom: 20px
+				h3
+					font-size: 1.5rem !important
+				h4
+					font-size: 0.875rem !important

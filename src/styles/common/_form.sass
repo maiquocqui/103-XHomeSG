@@ -22,10 +22,12 @@
 	color: $white
 	background: $red
 	text-transform: uppercase
+	line-height: 36px
 	&:hover
 		background: darken($red,10%)
 .btn-submit
 	@extend .btn
+	display: inline-block
 	line-height: 36px
 
 .btn-viewmore
@@ -44,7 +46,7 @@
 // FORM INIT
 input, textarea, select
 	font-family: inherit
-.form-wrap
+.form-wrap, .apply-frm
 	.form-group
 		// margin-bottom: 15px
 		input, textarea, select
@@ -68,6 +70,10 @@ input, textarea, select
 		padding: 10px 5px 0
 	input[type="submit"]
 		@extend .btn-submit
+		line-height: 36px
+.frm-btnwrap
+	label
+		display: none
 // FORM COMPONENTS
 
 .checkbox
